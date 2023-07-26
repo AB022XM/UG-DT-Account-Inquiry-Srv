@@ -1,0 +1,243 @@
+entity AccountDetails {
+    id UUID unique,
+    recordId String,
+    accountCurrency String,
+    accountNumber String
+    accountStatus AccountStatus
+    accountLifecycleStatusCode AccountLifecycleStatusCode
+    accrualStatusCode String,
+    casaAccountStatus CASAAccountStatus,
+    minorAccountStatusCode MinorAccountStatusCode,
+    accountTitle String,
+    advanceAgainstUnclearedFunds BigDecimal,
+    adHocStatementFlag Boolean,
+    additionalAddressFlag Boolean,
+    atmFacilityFlag Boolean,
+    checkReorderThresholdNumber BigDecimal,
+    deferredStmtGenerationDayOfMonth BigDecimal,
+    generateRateChangeIntimationFlag Boolean,
+    groupBonusInteresFlag GroupBonusInteresFlag,
+    holdMailFlag HoldMailFlag,
+    interestWaiverFlag InterestWaiverFlag,
+    internetBankingAccessFlag Boolean,
+    inwardDirectDebitAuthorizationFlag Boolean,
+    jointAccountFlag Boolean,
+    leadDaysIntimation Boolean,
+    mailAddressControlFlag Boolean,
+    mobileFacilityFlag Boolean,
+    numberOfCheckWithdrawals Integer,
+    numberOfPastDueChecks Integer,
+    numberOfStatementCopies Integer,
+    overdraftLimitAmount Integer,
+    pointOfSaleFacilityFlag Boolean,
+    standingInstructionFlag Boolean,
+    sweepoutInstructionFlag Boolean,
+    availableBalance BigDecimal,
+    branchCode Integer,
+    branchName String,
+    branchShortName String,
+    creditsMonthTillDateAmount Integer,
+    currentBalance Integer,
+    customerNumber String,
+    isAbsaCustomer Boolean,
+    fullName String,
+    accountOpeningDate ZonedDateTime,
+    statementPeriodStartDate ZonedDateTime,
+    statementPeriodEndDate ZonedDateTime,
+    debitsLastDate ZonedDateTime,
+    creditLastDate ZonedDateTime,
+    debitsMonthTillDateAmount ZonedDateTime,
+    debitsYearTillDateAmount BigDecimal,
+    CreditInterestAccruedAmount BigDecimal,
+    DebitInterestAccruedAmount BigDecimal,
+    AdjustedCreditInterestAccrued BigDecimal,
+    AdjustedDebitInterestAccrued BigDecimal,
+    ProjectedTaxOnAccruedInterestAmount BigDecimal,
+    InterestAccruedInCurrentFinancialYear Integer,
+    issuedInventoryPropertyType String,
+    lastIssuedCheckNumber Integer,
+    languageCode String,
+    lineNumber Integer,
+    minimumRequiredBalanceAmount BigDecimal,
+    minimumRequiredTradingBalanceAmount BigDecimal,
+    mtdCreditsCount Integer,
+    mtdDebitsCount Integer,
+    netAvailableBalanceForWithdrawal Integer,
+    netBalanceAmount Integer,
+    passbookLifecycleStatusCode Integer,
+    periodicAverageBalanceAmount BigDecimal,
+    previousDayClosingBookBalance BigDecimal,
+    productCode Integer,
+    productName String,
+    restrictedAccountFlag Boolean
+    staffFlag Boolean,
+    sweepinAmountOnLien Integer,
+    taxCode1 Integer,
+    taxCode2 Integer,
+    tdsExemptionLimitAmount1 Integer,
+    tdsExemptionLimitAmount2 Integer,
+    totalCASAHoldAmount BigDecimal,
+    totalUnclearFundAmount BigDecimal,
+    ytdCreditLastAmount Integer
+    ytdCreditsCount Integer
+    ytdDebitsCount Integer,
+    ytdDebitsLastAmount Integer,
+    message String,
+    sourceInfo String,
+    status String,
+    custFreeTextField1 String,
+    custFreeTextField2 String,
+    custFreeTextField3 String,
+    custFreeTextField4 String,
+    custFreeTextField5 String,
+    custFreeTextField6 String,
+    custFreeTextField7 String,
+    custFreeTextField8 String,
+    custFreeTextField9 String,
+    custFreeTextField10 String,
+    custFreeTextField11 String,
+    custFreeTextField12 String,
+    custFreeTextField13 String,
+    custFreeTextField14 String,
+    custFreeTextField15 String,
+    custFreeTextField16 String,
+    custFreeTextField17 String,
+    custFreeTextField18 String,
+    custFreeTextField19 String,
+    custFreeTextField20 String,
+    custFreeTextField21 String,
+    custFreeTextField22 String,
+    custFreeTextField23 String,
+    custFreeTextField24 String,
+    custFreeTextField25 String,
+    custFreeTextField26 String,
+    custFreeTextField27 String,
+    custFreeTextField28 String,
+    custFreeTextField29 String,
+    custFreeTextField30 String,
+    custFreeTextField31 String,
+    createdAt ZonedDateTime ,
+    createdBy String ,
+    updatedAt ZonedDateTime ,
+    updatedBy String
+
+}
+
+
+entity Customer
+{
+ recordId UUID unique,
+ customerId String,
+ accountNumber String,
+    customerAddress String,
+    customePhoneNumber String,
+    customerEmailAddress String,
+    customerFreeField String
+    customerFreeField2 String,
+    customerFreeField3 String,
+    customerFreeField4 String,
+    customerFreeField5 String,
+    customerFreeField6 String,
+    customerFreeField7 String,
+    customerFreeField8 String,
+    customerFreeField9 String,
+    customerFreeField10 String,
+    customerFreeField11 String,
+    customerFreeField12 String,
+    customerFreeField13 String,
+    customerFreeField14 String,
+    timestamp ZonedDateTime required,
+    createdAt ZonedDateTime ,
+    createdBy String ,
+    updatedAt ZonedDateTime ,
+    updatedBy String
+
+
+
+}
+
+entity UtilityTable{
+    id UUID unique,
+    recordId String,
+    utilityId String,
+    utilityName String,
+    utilityType String,
+    utilityValue BigDecimal,
+    utilityValueType String,
+    utilityValueType2 String,
+    utilityValueType3 String,
+    utilityValueType4 String,
+    utilityValueType5 String,
+    utilityValueType6 String,
+    utilityValueType7 String,
+    utilityValueType8 String,
+    utilityValueType9 String,
+    utilityValueType10 AnyBlob,
+    utilityValueType11 TextBlob,
+    utilityValueType12 TextBlob,
+    utilityValueType13 Boolean,
+    utilityValueType14 String,
+    utilityValueType15 String,
+    utilityValueType16 String,
+    utilityValueType17 String,
+    utilityValueType18 String,
+    utilityValueType19 String,
+    createdAt ZonedDateTime ,
+    createdBy String ,
+    updatedAt ZonedDateTime ,
+    updatedBy String
+}
+
+
+
+enum GroupBonusInteresFlag
+{
+    N,Y
+}
+
+enum AccountStatus{
+
+    Active,
+    Closed,
+    ClosedWithdrawal
+
+}
+
+
+enum AccountLifecycleStatusCode {
+    ACTIVE
+
+}
+
+enum  CASAAccountStatus{
+    ACTIVE
+
+}
+enum  MinorAccountStatusCode{
+    MAJOR,
+    MINOR
+
+}
+enum  HoldMailFlag{
+    ON_HOLD
+    OFF_HOLD
+}
+
+
+enum  InterestWaiverFlag {
+    NO_INTEREST_WAIVER,
+    INTEREST_WAIVER
+
+}
+
+enum  AccountTitle {
+    CASH,
+    SAVINGS,
+    CREDIT_CARD,
+    CREDIT_CARD_DEBIT,
+    CHECKING
+
+}
+
+
+

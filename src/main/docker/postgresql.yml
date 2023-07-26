@@ -5,9 +5,9 @@ services:
     image: postgres:15.3
     # volumes:
     #   - ~/volumes/jhipster/UGDTAccountInquirySrv/postgresql/:/var/lib/postgresql/data/
-    environment:
-      - POSTGRES_USER=UGDTAccountInquirySrv
-      - POSTGRES_PASSWORD=
+   environment:
+      - POSTGRES_USER=AbsaUGDTMicrosrvcUser
+      - POSTGRES_PASSWORD= nS7AYa5dNZUw987656782343y6hdw8vtiuegrbd
       - POSTGRES_HOST_AUTH_METHOD=trust
     healthcheck:
       test: ['CMD-SHELL', 'pg_isready -U $${POSTGRES_USER}']
