@@ -1,13 +1,12 @@
 entity AccountDetails {
     id UUID unique,
-    recordId String,
     accountCurrency String,
-    accountNumber String
-    accountStatus AccountStatus
-    accountLifecycleStatusCode AccountLifecycleStatusCode
+    accountNumber String,
+    accountStatus String,
+    accountLifecycleStatusCode String,
     accrualStatusCode String,
-    casaAccountStatus CASAAccountStatus,
-    minorAccountStatusCode MinorAccountStatusCode,
+    casaAccountStatus String,
+    minorAccountStatusCode String,
     accountTitle String,
     advanceAgainstUnclearedFunds BigDecimal,
     adHocStatementFlag Boolean,
@@ -16,9 +15,9 @@ entity AccountDetails {
     checkReorderThresholdNumber BigDecimal,
     deferredStmtGenerationDayOfMonth BigDecimal,
     generateRateChangeIntimationFlag Boolean,
-    groupBonusInteresFlag GroupBonusInteresFlag,
-    holdMailFlag HoldMailFlag,
-    interestWaiverFlag InterestWaiverFlag,
+    groupBonusInteresFlag String,
+    holdMailFlag String,
+    interestWaiverFlag String,
     internetBankingAccessFlag Boolean,
     inwardDirectDebitAuthorizationFlag Boolean,
     jointAccountFlag Boolean,
@@ -115,129 +114,31 @@ entity AccountDetails {
     custFreeTextField28 String,
     custFreeTextField29 String,
     custFreeTextField30 String,
-    custFreeTextField31 String,
-    createdAt ZonedDateTime ,
-    createdBy String ,
-    updatedAt ZonedDateTime ,
-    updatedBy String
-
-}
-
-
-entity Customer
-{
- recordId UUID unique,
- customerId String,
- accountNumber String,
-    customerAddress String,
-    customePhoneNumber String,
-    customerEmailAddress String,
-    customerFreeField String
-    customerFreeField2 String,
-    customerFreeField3 String,
-    customerFreeField4 String,
-    customerFreeField5 String,
-    customerFreeField6 String,
-    customerFreeField7 String,
-    customerFreeField8 String,
-    customerFreeField9 String,
-    customerFreeField10 String,
-    customerFreeField11 String,
-    customerFreeField12 String,
-    customerFreeField13 String,
-    customerFreeField14 String,
-    timestamp ZonedDateTime required,
-    createdAt ZonedDateTime ,
-    createdBy String ,
-    updatedAt ZonedDateTime ,
-    updatedBy String
+    custFreeTextField31 String
 
 
 
 }
 
-entity UtilityTable{
-    id UUID unique,
-    recordId String,
-    utilityId String,
-    utilityName String,
-    utilityType String,
-    utilityValue BigDecimal,
-    utilityValueType String,
-    utilityValueType2 String,
-    utilityValueType3 String,
-    utilityValueType4 String,
-    utilityValueType5 String,
-    utilityValueType6 String,
-    utilityValueType7 String,
-    utilityValueType8 String,
-    utilityValueType9 String,
-    utilityValueType10 AnyBlob,
-    utilityValueType11 TextBlob,
-    utilityValueType12 TextBlob,
-    utilityValueType13 Boolean,
-    utilityValueType14 String,
-    utilityValueType15 String,
-    utilityValueType16 String,
-    utilityValueType17 String,
-    utilityValueType18 String,
-    utilityValueType19 String,
-    createdAt ZonedDateTime ,
-    createdBy String ,
-    updatedAt ZonedDateTime ,
-    updatedBy String
-}
+
+entity Customer {
+    customerId String,
+    customerName String,
+    customerType String,
+    customerStatus String,
+    customerStatusCode String,
+    freeField1 String,
+    freeField2 String,
+    freeField3 String,
+    freeField4 String,
+    freeField5 String,
+    freeField6 String,
+    freeField7 String,
+    freeField8 String,
 
 
 
-enum GroupBonusInteresFlag
-{
-    N,Y
-}
-
-enum AccountStatus{
-
-    Active,
-    Closed,
-    ClosedWithdrawal
 
 }
-
-
-enum AccountLifecycleStatusCode {
-    ACTIVE
-
-}
-
-enum  CASAAccountStatus{
-    ACTIVE
-
-}
-enum  MinorAccountStatusCode{
-    MAJOR,
-    MINOR
-
-}
-enum  HoldMailFlag{
-    ON_HOLD
-    OFF_HOLD
-}
-
-
-enum  InterestWaiverFlag {
-    NO_INTEREST_WAIVER,
-    INTEREST_WAIVER
-
-}
-
-enum  AccountTitle {
-    CASH,
-    SAVINGS,
-    CREDIT_CARD,
-    CREDIT_CARD_DEBIT,
-    CHECKING
-
-}
-
 
 

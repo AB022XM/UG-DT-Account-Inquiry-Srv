@@ -1,0 +1,71 @@
+{
+  "applications": "*",
+  "changelogDate": "20230726120548",
+  "clientRootFolder": "UGDTAccountInquirySrv",
+  "databaseType": "sql",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "customer",
+  "fields": [
+    {
+      "fieldName": "customerId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "customerName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "customerType",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "customerStatus",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "customerStatusCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField1",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField2",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField3",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField4",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField5",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField6",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField7",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeField8",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "UGDTAccountInquirySrv",
+  "name": "Customer",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "no"
+}

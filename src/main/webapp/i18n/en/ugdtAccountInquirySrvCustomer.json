@@ -1,0 +1,36 @@
+{
+  "ugdtAccountInquirySrvApp": {
+    "ugdtAccountInquirySrvCustomer": {
+      "home": {
+        "title": "Customers",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Customer",
+        "createOrEditLabel": "Create or edit a Customer",
+        "notFound": "No Customers found"
+      },
+      "created": "A new Customer is created with identifier {{ param }}",
+      "updated": "A Customer is updated with identifier {{ param }}",
+      "deleted": "A Customer is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Customer {{ id }}?"
+      },
+      "detail": {
+        "title": "Customer"
+      },
+      "id": "ID",
+      "customerId": "Customer Id",
+      "customerName": "Customer Name",
+      "customerType": "Customer Type",
+      "customerStatus": "Customer Status",
+      "customerStatusCode": "Customer Status Code",
+      "freeField1": "Free Field 1",
+      "freeField2": "Free Field 2",
+      "freeField3": "Free Field 3",
+      "freeField4": "Free Field 4",
+      "freeField5": "Free Field 5",
+      "freeField6": "Free Field 6",
+      "freeField7": "Free Field 7",
+      "freeField8": "Free Field 8"
+    }
+  }
+}
