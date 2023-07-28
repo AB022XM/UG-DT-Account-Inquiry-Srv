@@ -48,7 +48,7 @@ public class AccountDetailsResource {
      * @return the {@link ResponseEntity} with status {@code 201 (Created)} and with body the new accountDetails, or with status {@code 400 (Bad Request)} if the accountDetails has already an ID.
      * @throws URISyntaxException if the Location URI syntax is incorrect.
      */
-    @PostMapping("/account-details")
+   // @PostMapping("/account-details")
     public ResponseEntity<AccountDetails> createAccountDetails(@Valid @RequestBody AccountDetails accountDetails)
         throws URISyntaxException {
         log.debug("REST request to save AccountDetails : {}", accountDetails);
@@ -72,7 +72,7 @@ public class AccountDetailsResource {
      * or with status {@code 500 (Internal Server Error)} if the accountDetails couldn't be updated.
      * @throws URISyntaxException if the Location URI syntax is incorrect.
      */
-    @PutMapping("/account-details/{id}")
+   // @PutMapping("/account-details/{id}")
     public ResponseEntity<AccountDetails> updateAccountDetails(
         @PathVariable(value = "id", required = false) final UUID id,
         @Valid @RequestBody AccountDetails accountDetails
@@ -490,7 +490,7 @@ public class AccountDetailsResource {
      *
      * @return the {@link ResponseEntity} with status {@code 200 (OK)} and the list of accountDetails in body.
      */
-    @GetMapping("/account-details")
+    @GetMapping("/bulk/account-details")
     public List<AccountDetails> getAllAccountDetails() {
         log.debug("REST request to get all AccountDetails");
         return accountDetailsRepository.findAll();
@@ -515,7 +515,7 @@ public class AccountDetailsResource {
      * @param id the id of the accountDetails to delete.
      * @return the {@link ResponseEntity} with status {@code 204 (NO_CONTENT)}.
      */
-    @DeleteMapping("/account-details/{id}")
+  //  @DeleteMapping("/account-details/{id}")
     public ResponseEntity<Void> deleteAccountDetails(@PathVariable UUID id) {
         log.debug("REST request to delete AccountDetails : {}", id);
         accountDetailsRepository.deleteById(id);
